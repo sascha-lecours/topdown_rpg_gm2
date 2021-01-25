@@ -8,3 +8,4 @@ recoil = 0.5;
 damageMin = 8;
 damageMax = 12;
 shotSpeed = 5;
+

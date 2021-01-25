@@ -1,4 +1,5 @@
 /// @description Reduce cooldown and recoil
-_myDeltaTime = delta_time/deltaTimeConstant;
+event_inherited();
 
 _myRecoil = lerp(_myRecoil, 0, recoilReductionRate*_myDeltaTime);
+_myShotcooldown -= _myDeltaTime;

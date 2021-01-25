@@ -1,5 +1,5 @@
 /// @description Step
-_myDeltaTime = delta_time/deltaTimeConstant;
+event_inherited();
 
 //Get input
 keyLeft = keyboard_check(ord("A"));
@@ -26,4 +26,10 @@ x += hSpeed * _myDeltaTime;
 y += vSpeed * _myDeltaTime;
 
 // Rotate Turret
-image_angle = point_direction(x, y, mouse_x, mouse_y);
+image_angle = point_direction(x, y, mouse_x, mouse_y); // Later this may get more complex -> slower traverse?
+
+// Attacking:
+
+if(buttonFire1){
+	with(leftGun) tryToShoot(x,y, image_angle);
+}
