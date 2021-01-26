@@ -22,14 +22,23 @@ hSpeed = lerp(hSpeed_old, hSpeed_new, acceleration * _myDeltaTime);
 vSpeed = lerp(vSpeed_old, vSpeed_new, acceleration * _myDeltaTime);
 
 // Apply movement
-x += hSpeed * _myDeltaTime;
-y += vSpeed * _myDeltaTime;
+x_real += hSpeed;
+y_real += vSpeed;
+
+x = floor(x_real);
+y = floor(y_real);
 
 // Rotate Turret
 image_angle = point_direction(x, y, mouse_x, mouse_y); // Later this may get more complex -> slower traverse?
 
+// Move components // TODO: Move this method to create event and call it here for each piece
+with(leftGun){
+	x= other.x + lengthdir_x(other.leftGunOffsetDistance, other.leftGunOffsetAngle + other.image_angle);
+	y= other.y + lengthdir_y(other.leftGunOffsetDistance, other.leftGunOffsetAngle + other.image_angle);
+}
+
 // Attacking:
 
 if(buttonFire1){
-	with(leftGun) tryToShoot(x,y, image_angle);
+	with(leftGun) tryToShoot(x,y, point_direction(x, y, mouse_x, mouse_y));
 }

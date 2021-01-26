@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"spr_debug_square","path":"sprites/spr_debug_square/spr_debug_square.yy",},"order":3,},
     {"id":{"name":"spr_playerMech","path":"sprites/spr_playerMech/spr_playerMech.yy",},"order":0,},
     {"id":{"name":"obj_gameController","path":"objects/obj_gameController/obj_gameController.yy",},"order":1,},
     {"id":{"name":"obj_playerBullet","path":"objects/obj_playerBullet/obj_playerBullet.yy",},"order":1,},

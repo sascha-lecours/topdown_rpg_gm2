@@ -4,7 +4,9 @@ event_inherited();
 name = "Player";
 
 topWalkSpeed = 3.5;
-acceleration = 0.1;
+acceleration = 2;
+x_real = x;
+y_real = y;
 
 hSpeed = 0;
 vSpeed = 0;
@@ -21,8 +23,8 @@ function InitializeGun(_aGun){
 
 // Item slots:
 
-leftGunOffsetX = 0;
-leftGunOffsetY = 0;
+leftGunOffsetDistance = 17;
+leftGunOffsetAngle = 45;
 leftgunType = obj_machineGun;
-leftGun = instance_create_layer(x+leftGunOffsetX, y+leftGunOffsetY, "Instances", leftgunType);
+leftGun = instance_create_layer(x, y, "Instances", leftgunType);
 InitializeGun(leftGun);
