@@ -2,6 +2,9 @@
   "resources": [
     {"id":{"name":"spr_debug_square","path":"sprites/spr_debug_square/spr_debug_square.yy",},"order":3,},
     {"id":{"name":"spr_playerMech","path":"sprites/spr_playerMech/spr_playerMech.yy",},"order":0,},
+    {"id":{"name":"obj_playerBullet_sg","path":"objects/obj_playerBullet_sg/obj_playerBullet_sg.yy",},"order":2,},
+    {"id":{"name":"obj_mobility","path":"objects/obj_mobility/obj_mobility.yy",},"order":0,},
+    {"id":{"name":"obj_shotGun","path":"objects/obj_shotGun/obj_shotGun.yy",},"order":4,},
     {"id":{"name":"obj_gameController","path":"objects/obj_gameController/obj_gameController.yy",},"order":1,},
     {"id":{"name":"obj_playerBullet","path":"objects/obj_playerBullet/obj_playerBullet.yy",},"order":1,},
     {"id":{"name":"obj_playerBullet_mg","path":"objects/obj_playerBullet_mg/obj_playerBullet_mg.yy",},"order":0,},
@@ -48,6 +51,7 @@
     {"folderPath":"folders/Extensions.yy","order":13,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Guns.yy","order":4,"resourceVersion":"1.0","name":"Guns","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Guns/playerBullets.yy","order":3,"resourceVersion":"1.0","name":"playerBullets","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Mobility.yy","order":6,"resourceVersion":"1.0","name":"Mobility","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

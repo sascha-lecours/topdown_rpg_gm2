@@ -1,4 +1,4 @@
 /// @description Initialize
 event_inherited();
 
-name = "mg_bullet";
+name = "sg_bullet";

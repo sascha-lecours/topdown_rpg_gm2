@@ -1,2 +1,2 @@
 /// @description Delta time
-_myDeltaTime = delta_time/deltaTimeConstant;
+_myDeltaTime = obj_gameController.efficientDeltaTime;

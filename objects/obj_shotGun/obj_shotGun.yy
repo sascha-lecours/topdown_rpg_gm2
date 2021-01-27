@@ -21,7 +21,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_machineGun","path":"objects/obj_machineGun/obj_machineGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_shotGun","path":"objects/obj_shotGun/obj_shotGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -30,7 +30,7 @@
     "path": "folders/Objects/Guns.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_machineGun",
+  "name": "obj_shotGun",
   "tags": [],
   "resourceType": "GMObject",
 }

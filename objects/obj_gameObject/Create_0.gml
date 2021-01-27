@@ -1,4 +1,3 @@
-/// @description Set delta time constant
-deltaTimeConstant = global.delta_time_constant;
+/// @description initialize
 
 name = "unset object name";

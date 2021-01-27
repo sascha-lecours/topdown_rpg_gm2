@@ -21,17 +21,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_playerBullet","path":"objects/obj_playerBullet/obj_playerBullet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_playerBullet","path":"objects/obj_playerBullet/obj_playerBullet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_mobility","path":"objects/obj_mobility/obj_mobility.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_mobility","path":"objects/obj_mobility/obj_mobility.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "playerBullets",
-    "path": "folders/Objects/Guns/playerBullets.yy",
+    "name": "Mobility",
+    "path": "folders/Objects/Mobility.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_playerBullet",
+  "name": "obj_mobility",
   "tags": [],
   "resourceType": "GMObject",
 }
