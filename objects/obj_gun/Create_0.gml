@@ -14,6 +14,11 @@ shotSpeed = 6;
 shotLifetime = 5;
 maxOffset = 60; // max # of degrees a shot can be off by
 
+explosive = false;
+explosion_size = 0;
+explosion_damageMin = 1;
+explosion_damageMax = 1;
+
 _myShotcooldown = 0;
 _myRecoil = 0;
 _recoilToDegrees = 2;
@@ -21,8 +26,13 @@ myOwner = noone;
 
 
 function getDamage(){
-	_myDamage = irandom_range(damageMin, damageMax);
-	return _myDamage;
+	var myDamage = irandom_range(damageMin, damageMax);
+	return myDamage;
+}
+
+function getExplosionDamage(){
+	var myExplosionDamage = irandom_range(explosion_damageMin, explosion_damageMax);
+	return myExplosionDamage;
 }
 
 function getInaccuracy(){ // returns an amount, in degrees, to add to a shot. recoil + inaccuracy
@@ -36,18 +46,23 @@ function getInaccuracy(){ // returns an amount, in degrees, to add to a shot. re
 }
 
 function tryToShoot(aimDirection){
-	// show_debug_message("trying to shoot. Shot cooldown: " + string(_myShotcooldown));
 	if(_myShotcooldown > 0) return;
 	
 	for(i=0;i<bulletsPerShot;i+=1) {
-		_myShot = instance_create_layer(x, y,"Instances", obj_playerBullet_mg);
-		with(_myShot){
-			direction = aimDirection + other.getInaccuracy();
-			image_angle = direction;
-			speed = other.shotSpeed;
-			damage = other.getDamage();
-			lifetime = other.shotLifetime;
+		var myShot = instance_create_layer(x, y,"Instances", obj_playerBullet_mg);
+
+		myShot.direction = aimDirection + getInaccuracy();
+		myShot.image_angle = myShot.direction;
+		myShot.speed = shotSpeed;
+		myShot.damage = getDamage();
+		myShot.lifetime = shotLifetime;
+		
+		if(explosive){
+			myShot.explosive = true;
+			myShot.explosion_size = explosion_size;
+			myShot.explosion_damage = getExplosionDamage();
 		}
+
 	}
 	_myRecoil += recoilPerShot;
 	_myShotcooldown = shotCooldown;

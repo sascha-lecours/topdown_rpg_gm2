@@ -13,6 +13,11 @@ hSpeed = 0;
 vSpeed = 0;
 walkspeedBoost = 0;
 
+// Starting components
+leftGunType = obj_machineGun;
+rightGunType = obj_railGun;
+dashModuleType = obj_mobility;
+
 //Set custom mouse cursor
 window_set_cursor(cr_none);
 cursor_sprite = spr_cursor;
@@ -29,16 +34,14 @@ function attachComponent(_aComponent){
 
 leftGunOffsetDistance = 17;
 leftGunOffsetAngle = 45;
-leftGunType = obj_machineGun;
 leftGun = instance_create_layer(x, y, "Instances", leftGunType);
 attachComponent(leftGun);
 
 rightGunOffsetDistance = 17;
 rightGunOffsetAngle = -45;
-rightGunType = obj_shotGun;
 rightGun = instance_create_layer(x, y, "Instances", rightGunType);
 attachComponent(rightGun);
 
-dashModuleType = obj_mobility;
+
 dashModule =  instance_create_layer(x, y, "Instances", dashModuleType);
 attachComponent(dashModule);
