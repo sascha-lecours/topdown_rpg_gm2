@@ -1,7 +1,7 @@
 /// @description Generic gun "class"
 event_inherited();
 
-gunType = gunTypes.machinegun;
+gunType = gunTypes.machineGun;
 bullet1 = noone;
 bulletsPerShot = 1;
 shotCooldown = 0.1; // Time in seconds 
@@ -15,9 +15,9 @@ shotLifetime = 5;
 maxOffset = 60; // max # of degrees a shot can be off by
 
 explosive = false;
-explosion_size = 0;
-explosion_damageMin = 1;
-explosion_damageMax = 1;
+explosionSize = 0;
+explosionDamageMin = 1;
+explosionDamageMax = 1;
 
 _myShotcooldown = 0;
 _myRecoil = 0;
@@ -31,7 +31,7 @@ function getDamage(){
 }
 
 function getExplosionDamage(){
-	var myExplosionDamage = irandom_range(explosion_damageMin, explosion_damageMax);
+	var myExplosionDamage = irandom_range(explosionDamageMin, explosionDamageMax);
 	return myExplosionDamage;
 }
 
@@ -59,8 +59,8 @@ function tryToShoot(aimDirection){
 		
 		if(explosive){
 			myShot.explosive = true;
-			myShot.explosion_size = explosion_size;
-			myShot.explosion_damage = getExplosionDamage();
+			myShot.explosionSize = explosionSize;
+			myShot.explosionDamage = getExplosionDamage();
 		}
 
 	}

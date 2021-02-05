@@ -3,9 +3,9 @@ global.delta_time_constant = 1000000;
 
 
 enum gunTypes {
-	machinegun,
-	railgun,
-	shotgun,
+	machineGun,
+	railGun,
+	shotGun,
 	rocketLauncher
 }
 

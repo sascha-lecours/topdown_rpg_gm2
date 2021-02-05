@@ -1,4 +1,4 @@
 /// @description Initialize
 event_inherited();
 
-name = "sg_bullet";
+name = "rocketLauncher_bullet";

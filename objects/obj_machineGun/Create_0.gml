@@ -1,7 +1,7 @@
 /// @description Initialize
 event_inherited();
 
-gunType = gunTypes.machinegun;
+gunType = gunTypes.machineGun;
 bullet1 = obj_playerBullet_mg;
 shotCooldown = 0.1; // Time in seconds 
 accuracy = 0.95; // 1 = perfectly accurate, 0 = 180 degree spread

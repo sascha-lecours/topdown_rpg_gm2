@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_playerBullet_mg",
-    "path": "sprites/spr_playerBullet_mg/spr_playerBullet_mg.yy",
+    "name": "spr_explosion",
+    "path": "sprites/spr_explosion/spr_explosion.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_playerBullet",
-    "path": "objects/obj_playerBullet/obj_playerBullet.yy",
+    "name": "obj_gameObject",
+    "path": "objects/obj_gameObject/obj_gameObject.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,7 +24,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_playerBullet_ro","path":"objects/obj_playerBullet_ro/obj_playerBullet_ro.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_explosion","path":"objects/obj_explosion/obj_explosion.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_explosion","path":"objects/obj_explosion/obj_explosion.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,7 +34,7 @@
     "path": "folders/Objects/Guns/playerBullets.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_playerBullet_ro",
+  "name": "obj_explosion",
   "tags": [],
   "resourceType": "GMObject",
 }

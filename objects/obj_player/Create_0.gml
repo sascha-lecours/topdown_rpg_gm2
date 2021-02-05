@@ -15,7 +15,7 @@ walkspeedBoost = 0;
 
 // Starting components
 leftGunType = obj_machineGun;
-rightGunType = obj_railGun;
+rightGunType = obj_rocketLauncher;
 dashModuleType = obj_mobility;
 
 //Set custom mouse cursor

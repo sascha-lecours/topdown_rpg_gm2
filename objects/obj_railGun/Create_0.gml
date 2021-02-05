@@ -1,7 +1,7 @@
 /// @description Initialize
 event_inherited();
 
-gunType = gunTypes.railgun;
+gunType = gunTypes.railGun;
 bullet1 = obj_playerBullet_rg;
 bulletsPerShot = 1;
 shotCooldown = 0.75; // Time in seconds 
