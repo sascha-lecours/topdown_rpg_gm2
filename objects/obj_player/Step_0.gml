@@ -13,9 +13,11 @@ keyDash = keyboard_check(vk_lshift);
 inputDirection = point_direction(0,0, keyRight - keyLeft, keyDown - keyUp);
 inputMagnitude = (keyRight - keyLeft !=0) || (keyDown - keyUp != 0);
 
+
 function getWalkSpeed(){
 	return(topWalkSpeed + walkspeedBoost);	
 }
+
 
 // Calculate movement
 hSpeed_old = hSpeed;
@@ -29,22 +31,25 @@ vSpeed = lerp(vSpeed_old, vSpeed_new, acceleration * _myDeltaTime);
 x_real += hSpeed;
 y_real += vSpeed;
 
-x = floor(x_real);
-y = floor(y_real);
+tryToMove(floor(x_real), floor(y_real)); // Handles collisions with solids
 
 // Rotate Turret
-image_angle = point_direction(x, y, mouse_x, mouse_y); // Later this may get more complex -> slower traverse?
+facingAngle = point_direction(x, y, mouse_x, mouse_y); // Later this may get more complex -> slower traverse?
 
 // Move components // TODO: Move this method to create event and call it here for each piece
 with(leftGun){
-	x= other.x + lengthdir_x(other.leftGunOffsetDistance, other.leftGunOffsetAngle + other.image_angle);
-	y= other.y + lengthdir_y(other.leftGunOffsetDistance, other.leftGunOffsetAngle + other.image_angle);
+	x= other.x + lengthdir_x(other.leftGunOffsetDistance, other.leftGunOffsetAngle + other.facingAngle);
+	y= other.y + lengthdir_y(other.leftGunOffsetDistance, other.leftGunOffsetAngle + other.facingAngle);
 }
 
 with(rightGun){
-	x= other.x + lengthdir_x(other.rightGunOffsetDistance, other.rightGunOffsetAngle + other.image_angle);
-	y= other.y + lengthdir_y(other.rightGunOffsetDistance, other.rightGunOffsetAngle + other.image_angle);
+	x= other.x + lengthdir_x(other.rightGunOffsetDistance, other.rightGunOffsetAngle + other.facingAngle);
+	y= other.y + lengthdir_y(other.rightGunOffsetDistance, other.rightGunOffsetAngle + other.facingAngle);
 }
+
+// Sprite is now read to update
+
+updateSprite();
 
 // Attacking:
 
