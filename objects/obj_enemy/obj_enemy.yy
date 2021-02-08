@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_gameObject",
-    "path": "objects/obj_gameObject/obj_gameObject.yy",
+    "name": "obj_gameObject_Components",
+    "path": "objects/obj_gameObject_Components/obj_gameObject_Components.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

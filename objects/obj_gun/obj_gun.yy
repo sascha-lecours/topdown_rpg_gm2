@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_gameObject",
-    "path": "objects/obj_gameObject/obj_gameObject.yy",
+    "name": "obj_component",
+    "path": "objects/obj_component/obj_component.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Guns",
-    "path": "folders/Objects/Guns.yy",
+    "path": "folders/Objects/Components/Guns.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_gun",

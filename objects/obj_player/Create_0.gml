@@ -19,17 +19,12 @@ leftGunType = obj_machineGun;
 rightGunType = obj_rocketLauncher;
 dashModuleType = obj_mobility;
 
-_mySprite = instance_create_layer(x, y, "Instances", obj_player_sprite);
+_mySprite = instance_create_layer(x, y, "Player", obj_player_sprite);
+myBulletLayer = "Bullets_player";
 
 //Set custom mouse cursor
 window_set_cursor(cr_none);
 cursor_sprite = spr_cursor;
-
-function attachComponent(_aComponent){
-	with(_aComponent){
-		myOwner = other;
-	}
-}
 
 function updateSprite(){
 	_mySprite.x = x;
@@ -81,14 +76,14 @@ function stop_speed(_axis){
 
 leftGunOffsetDistance = 17;
 leftGunOffsetAngle = 45;
-leftGun = instance_create_layer(x, y, "Instances", leftGunType);
+leftGun = instantiateComponent(leftGunType);
 attachComponent(leftGun);
 
 rightGunOffsetDistance = 17;
 rightGunOffsetAngle = -45;
-rightGun = instance_create_layer(x, y, "Instances", rightGunType);
+rightGun = leftGun = instantiateComponent(rightGunType);
 attachComponent(rightGun);
 
 
-dashModule =  instance_create_layer(x, y, "Instances", dashModuleType);
+dashModule =  instantiateComponent(dashModuleType);
 attachComponent(dashModule);

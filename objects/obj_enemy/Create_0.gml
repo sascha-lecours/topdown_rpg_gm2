@@ -1,7 +1,10 @@
 /// @description Initialize
 event_inherited();
 
+name = "Uninitialized Enemy";
 maxHP = 1;
+myBulletLayer = "Bullets_enemies";
+myMainGun = obj_enemyTurretGun;
 
 _currentHP = maxHP;
 
@@ -18,5 +21,4 @@ function traverseTowardTarget(myTarget, traverseSpeed){
 	var traverseDirection = angle_difference(image_angle, targetDirection);
 	image_angle -= (min(abs(traverseDirection), 10) * sign(traverseDirection)) * traverseSpeed * _myDeltaTime;
 }
-
 

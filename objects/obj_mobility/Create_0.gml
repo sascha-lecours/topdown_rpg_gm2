@@ -1,4 +1,5 @@
 /// @description Initialize
+event_inherited();
 
 name = "Generic mobility slot";
 myOwner = noone;

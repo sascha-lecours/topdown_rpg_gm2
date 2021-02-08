@@ -1,15 +1,12 @@
 {
-  "spriteId": {
-    "name": "spr_playerBullet_mg",
-    "path": "sprites/spr_playerBullet_mg/spr_playerBullet_mg.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_playerBullet",
-    "path": "objects/obj_playerBullet/obj_playerBullet.yy",
+    "name": "obj_gun",
+    "path": "objects/obj_gun/obj_gun.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -24,16 +21,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_playerBullet_sg","path":"objects/obj_playerBullet_sg/obj_playerBullet_sg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_enemyGun","path":"objects/obj_enemyGun/obj_enemyGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "playerBullets",
-    "path": "folders/Objects/Components/Guns/playerBullets.yy",
+    "name": "enemyGuns",
+    "path": "folders/Objects/Components/Guns/enemyGuns.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_playerBullet_sg",
+  "name": "obj_enemyGun",
   "tags": [],
   "resourceType": "GMObject",
 }

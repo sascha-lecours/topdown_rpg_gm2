@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Guns",
-    "path": "folders/Objects/Guns.yy",
+    "name": "playerGuns",
+    "path": "folders/Objects/Components/Guns/playerGuns.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_rocketLauncher",

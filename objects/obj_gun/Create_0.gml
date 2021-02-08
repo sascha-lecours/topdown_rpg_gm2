@@ -23,7 +23,11 @@ _myShotcooldown = 0;
 _myRecoil = 0;
 _recoilToDegrees = 2;
 myOwner = noone;
+myBulletLayer = "Bullets_enemies";
 
+function attach(){
+	myBulletLayer = myOwner.myBulletLayer;
+}
 
 function getDamage(){
 	var myDamage = irandom_range(damageMin, damageMax);
@@ -49,7 +53,7 @@ function tryToShoot(aimDirection){
 	if(_myShotcooldown > 0) return;
 	
 	for(i=0;i<bulletsPerShot;i+=1) {
-		var myShot = instance_create_layer(x, y,"Instances", obj_playerBullet_mg);
+		var myShot = instance_create_layer(x, y, myBulletLayer, obj_playerBullet_mg);
 
 		myShot.direction = aimDirection + getInaccuracy();
 		myShot.image_angle = myShot.direction;
