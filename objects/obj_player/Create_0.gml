@@ -81,7 +81,7 @@ attachComponent(leftGun);
 
 rightGunOffsetDistance = 17;
 rightGunOffsetAngle = -45;
-rightGun = leftGun = instantiateComponent(rightGunType);
+rightGun = instantiateComponent(rightGunType);
 attachComponent(rightGun);
 
 

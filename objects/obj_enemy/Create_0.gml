@@ -6,6 +6,12 @@ maxHP = 1;
 myBulletLayer = "Bullets_enemies";
 myMainGun = obj_enemyTurretGun;
 
+flashWhite = false;
+flashTime = 0.2;
+_curFlashTime = 0;
+
+facingAngle = 0;
+
 _currentHP = maxHP;
 
 function getPlayer(){
@@ -18,7 +24,13 @@ function getPlayer(){
 
 function traverseTowardTarget(myTarget, traverseSpeed){
 	var targetDirection = point_direction(x, y, myTarget.x, myTarget.y);
-	var traverseDirection = angle_difference(image_angle, targetDirection);
-	image_angle -= (min(abs(traverseDirection), 10) * sign(traverseDirection)) * traverseSpeed * _myDeltaTime;
+	var traverseDirection = angle_difference(facingAngle, targetDirection);
+	facingAngle -= (min(abs(traverseDirection), 10) * sign(traverseDirection)) * traverseSpeed * _myDeltaTime;
 }
 
+function showHurt(){
+	flashWhite = true;
+	_curFlashTime = flashTime;
+}
+
+showHurt();

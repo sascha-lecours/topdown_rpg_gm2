@@ -1,4 +1,7 @@
 /// @description Initialize
 event_inherited();
 
-mainGunType = obj_enemyTurretGun;
+gunType = gunTypes.enemyGuns;
+bullet1 = obj_enemyBullet_1;
+
+// TODO: Add stats

@@ -5,3 +5,5 @@ event_inherited();
 _target = getPlayer();
 
 traverseTowardTarget(_target, traverseSpeed);
+
+mainGun.tryToShoot(facingAngle);

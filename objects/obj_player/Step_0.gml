@@ -37,6 +37,7 @@ tryToMove(floor(x_real), floor(y_real)); // Handles collisions with solids
 facingAngle = point_direction(x, y, mouse_x, mouse_y); // Later this may get more complex -> slower traverse?
 
 // Move components // TODO: Move this method to create event and call it here for each piece
+// TODO cont'd: array of components for each component user, with offsets.
 with(leftGun){
 	x= other.x + lengthdir_x(other.leftGunOffsetDistance, other.leftGunOffsetAngle + other.facingAngle);
 	y= other.y + lengthdir_y(other.leftGunOffsetDistance, other.leftGunOffsetAngle + other.facingAngle);

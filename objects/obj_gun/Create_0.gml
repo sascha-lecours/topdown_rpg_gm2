@@ -53,7 +53,7 @@ function tryToShoot(aimDirection){
 	if(_myShotcooldown > 0) return;
 	
 	for(i=0;i<bulletsPerShot;i+=1) {
-		var myShot = instance_create_layer(x, y, myBulletLayer, obj_playerBullet_mg);
+		var myShot = instance_create_layer(x, y, myBulletLayer, bullet1);
 
 		myShot.direction = aimDirection + getInaccuracy();
 		myShot.image_angle = myShot.direction;
