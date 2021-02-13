@@ -3,6 +3,9 @@ event_inherited();
 
 name = "Player";
 
+maxHp = 10;
+curHp = maxHp;
+
 topWalkSpeed = 3.5;
 acceleration = 2;
 
@@ -12,7 +15,7 @@ y_real = y;
 hSpeed = 0;
 vSpeed = 0;
 walkspeedBoost = 0;
-facingAngle = 0; //updated instead of image_angle, passed to sprite object.
+facingAngle = 0; // updated instead of image_angle, passed to sprite object.
 
 // Starting components
 leftGunType = obj_machineGun;
@@ -32,12 +35,12 @@ function updateSprite(){
 	_mySprite.image_angle = facingAngle;
 }
 
-function tryToMove(newX, newY){
+function tryToMove(newX, newY){ // TODO: Move to general object
 	if(newX!= x && !place_free(newX, y)){
 		var _Xdistance = abs(x - newX);
 		if(newX > x) move_contact_solid(0, _Xdistance);
 		if(newX < x) move_contact_solid(180, _Xdistance);
-		stop_speed("x");
+		stopSpeed("x");
 	} else {
 		x = newX;	
 	}
@@ -46,13 +49,18 @@ function tryToMove(newX, newY){
 		var _Ydistance = abs(y - newY);
 		if(newY > y) move_contact_solid(270, _Ydistance);
 		if(newY < y) move_contact_solid(90, _Ydistance);
-		stop_speed("y");
+		stopSpeed("y");
 	} else {
 		y = newY;	
 	}
 }
 
-function stop_speed(_axis){
+function takeDamage(_damage){ // TODO: Move to general object
+	curHp -= _damage;
+	curHp = max(0, curHp);
+}
+
+function stopSpeed(_axis){ // TODO: Move to general object
 	switch (_axis){
 		case "x":
 			hSpeed = 0;

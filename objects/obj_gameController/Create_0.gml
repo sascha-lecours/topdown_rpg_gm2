@@ -2,3 +2,4 @@
 
 // TODO: Make this a singleton
 deltaTimeConstant = global.delta_time_constant;
+player = noone;
