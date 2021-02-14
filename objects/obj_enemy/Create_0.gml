@@ -2,17 +2,10 @@
 event_inherited();
 
 name = "Uninitialized Enemy";
-maxHP = 1;
 myBulletLayer = "Bullets_enemies";
-myMainGun = obj_enemyTurretGun;
-
-flashWhite = false;
-flashTime = 0.2;
-_curFlashTime = 0;
+mainGunType = obj_enemyTurretGun;
 
 facingAngle = 0;
-
-_currentHP = maxHP;
 
 function getPlayer(){
 	if(instance_exists(obj_player)) {
@@ -28,9 +21,3 @@ function traverseTowardTarget(myTarget, traverseSpeed){
 	facingAngle -= (min(abs(traverseDirection), 10) * sign(traverseDirection)) * traverseSpeed * _myDeltaTime;
 }
 
-function showHurt(){
-	flashWhite = true;
-	_curFlashTime = flashTime;
-}
-
-showHurt();

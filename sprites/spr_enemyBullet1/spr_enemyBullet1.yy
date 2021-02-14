@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2c9d1084-1f8e-4732-88c9-74a2ddfaf8cf","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "topdown_actionrpg",
-    "path": "topdown_actionrpg.yyp",
+    "name": "bulletSprites",
+    "path": "folders/Sprites/bulletSprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_enemyBullet1",

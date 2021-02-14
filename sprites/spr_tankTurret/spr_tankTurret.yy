@@ -8,7 +8,7 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 11,
-  "bbox_right": 20,
+  "bbox_right": 23,
   "bbox_top": 11,
   "bbox_bottom": 20,
   "HTile": false,
@@ -21,15 +21,15 @@
     "path": "texturegroups/Default",
   },
   "swatchColours": null,
-  "gridX": 4,
-  "gridY": 4,
+  "gridX": 0,
+  "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ea040417-437e-4f25-95ab-9929952f9e1b","path":"sprites/spr_playerHitbox/spr_playerHitbox.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ea040417-437e-4f25-95ab-9929952f9e1b","path":"sprites/spr_playerHitbox/spr_playerHitbox.yy",},"LayerId":{"name":"0dec798a-634a-4e42-8606-6c8c11a486a7","path":"sprites/spr_playerHitbox/spr_playerHitbox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_playerHitbox","path":"sprites/spr_playerHitbox/spr_playerHitbox.yy",},"resourceVersion":"1.0","name":"ea040417-437e-4f25-95ab-9929952f9e1b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"dc2d1b2b-ca33-4049-a0d4-c6c155d32055","path":"sprites/spr_tankTurret/spr_tankTurret.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"dc2d1b2b-ca33-4049-a0d4-c6c155d32055","path":"sprites/spr_tankTurret/spr_tankTurret.yy",},"LayerId":{"name":"2da0091c-6ec3-4f56-b3f7-a2743c5db130","path":"sprites/spr_tankTurret/spr_tankTurret.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_tankTurret","path":"sprites/spr_tankTurret/spr_tankTurret.yy",},"resourceVersion":"1.0","name":"dc2d1b2b-ca33-4049-a0d4-c6c155d32055","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_playerHitbox","path":"sprites/spr_playerHitbox/spr_playerHitbox.yy",},
+    "spriteId": {"name":"spr_tankTurret","path":"sprites/spr_tankTurret/spr_tankTurret.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c37136cd-92d1-4c20-9572-2b1bd65bfe67","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ea040417-437e-4f25-95ab-9929952f9e1b","path":"sprites/spr_playerHitbox/spr_playerHitbox.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"77e57652-8b88-4552-b9a2-6474101e12d9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dc2d1b2b-ca33-4049-a0d4-c6c155d32055","path":"sprites/spr_tankTurret/spr_tankTurret.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,21 +58,21 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_playerHitbox","path":"sprites/spr_playerHitbox/spr_playerHitbox.yy",},
+    "parent": {"name":"spr_tankTurret","path":"sprites/spr_tankTurret/spr_tankTurret.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_playerHitbox",
+    "name": "spr_tankTurret",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0dec798a-634a-4e42-8606-6c8c11a486a7","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2da0091c-6ec3-4f56-b3f7-a2743c5db130","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "player",
-    "path": "folders/Sprites/player.yy",
+    "name": "enemyTank01",
+    "path": "folders/Sprites/enemies/enemyTank01.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_playerHitbox",
+  "name": "spr_tankTurret",
   "tags": [],
   "resourceType": "GMSprite",
 }

@@ -4,7 +4,7 @@ event_inherited();
 name = "Player";
 
 maxHp = 10;
-curHp = maxHp;
+setHp(maxHp);
 
 topWalkSpeed = 3.5;
 acceleration = 2;
@@ -33,49 +33,6 @@ function updateSprite(){
 	_mySprite.x = x;
 	_mySprite.y = y;
 	_mySprite.image_angle = facingAngle;
-}
-
-function tryToMove(newX, newY){ // TODO: Move to general object
-	if(newX!= x && !place_free(newX, y)){
-		var _Xdistance = abs(x - newX);
-		if(newX > x) move_contact_solid(0, _Xdistance);
-		if(newX < x) move_contact_solid(180, _Xdistance);
-		stopSpeed("x");
-	} else {
-		x = newX;	
-	}
-	
-	if(newY!= y && !place_free(x, newY)){
-		var _Ydistance = abs(y - newY);
-		if(newY > y) move_contact_solid(270, _Ydistance);
-		if(newY < y) move_contact_solid(90, _Ydistance);
-		stopSpeed("y");
-	} else {
-		y = newY;	
-	}
-}
-
-function takeDamage(_damage){ // TODO: Move to general object
-	curHp -= _damage;
-	curHp = max(0, curHp);
-}
-
-function stopSpeed(_axis){ // TODO: Move to general object
-	switch (_axis){
-		case "x":
-			hSpeed = 0;
-			x_real = x;
-			break;
-		case "y":
-			vSpeed = 0;
-			y_real = y;
-			break;
-		default:
-			hSpeed = 0;
-			x_real = x;
-			vSpeed = 0;
-			y_real = y;
-	}
 }
 
 // Item slots:

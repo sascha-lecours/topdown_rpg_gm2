@@ -2,3 +2,4 @@
 event_inherited();
 
 name = "uninitialized player bullet";
+myExplosion = obj_explosionPlayer;

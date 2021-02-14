@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c493dced-1575-483b-b9ac-7d45e64ce7c0","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "topdown_actionrpg",
-    "path": "topdown_actionrpg.yyp",
+    "name": "enemies",
+    "path": "folders/Sprites/enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_enemyTurret",

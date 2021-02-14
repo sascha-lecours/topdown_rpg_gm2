@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"630e3622-37f7-4f92-81b1-ebb7c65d0584","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "topdown_actionrpg",
-    "path": "topdown_actionrpg.yyp",
+    "name": "bulletSprites",
+    "path": "folders/Sprites/bulletSprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_explosion",

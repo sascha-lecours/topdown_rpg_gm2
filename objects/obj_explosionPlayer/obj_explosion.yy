@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Guns",
-    "path": "folders/Objects/Components/Guns.yy",
+    "name": "playerBullets",
+    "path": "folders/Objects/Components/Guns/playerBullets.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_explosion",

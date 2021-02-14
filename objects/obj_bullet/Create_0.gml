@@ -9,3 +9,4 @@ lifetime = 5; // in seconds
 explosive = false;
 explosionSize = 0;
 explosionDamage = 0;
+myExplosionType = obj_explosionEnemy;

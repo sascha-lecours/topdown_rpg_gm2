@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ad8de935-abe7-4397-b57d-1a322497b154","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "bulletSprites",
+    "path": "folders/Sprites/bulletSprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_playerBullet_mg",
