@@ -1,6 +1,8 @@
 /// @description Traverse toward player and fire if able
 event_inherited();
 
+distanceToMove = moveSpeed*_myDeltaTime;
+
 switch(currentState){
 	case states.movingUp:
 	// TODO: Fill in these actions

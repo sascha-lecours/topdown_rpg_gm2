@@ -13,27 +13,12 @@ keyDash = keyboard_check(vk_lshift);
 inputDirection = point_direction(0,0, keyRight - keyLeft, keyDown - keyUp);
 inputMagnitude = (keyRight - keyLeft !=0) || (keyDown - keyUp != 0);
 
+// Updates hSpeed and vSpeed
+calculateMoveSpeeds();
 
-function getWalkSpeed(){
-	return(topWalkSpeed + walkspeedBoost);	
-}
+updateRealCoordinatesAndTryToMove(hSpeed, vSpeed);
 
-
-// Calculate movement
-hSpeed_old = hSpeed;
-vSpeed_old = vSpeed;
-hSpeed_new = lengthdir_x(inputMagnitude * getWalkSpeed(), inputDirection);
-vSpeed_new = lengthdir_y(inputMagnitude * getWalkSpeed(), inputDirection);
-hSpeed = lerp(hSpeed_old, hSpeed_new, acceleration * _myDeltaTime);
-vSpeed = lerp(vSpeed_old, vSpeed_new, acceleration * _myDeltaTime);
-
-// Apply movement
-x_real += hSpeed;
-y_real += vSpeed;
-
-tryToMove(floor(x_real), floor(y_real)); // Handles collisions with solids
-
-// Rotate Turret
+// Make image face correct direction
 facingAngle = point_direction(x, y, mouse_x, mouse_y); // Later this may get more complex -> slower traverse?
 
 // Move components // TODO: Move this method to create event and call it here for each piece

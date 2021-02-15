@@ -35,6 +35,20 @@ function updateSprite(){
 	_mySprite.image_angle = facingAngle;
 }
 
+function getWalkSpeed(){
+	return(topWalkSpeed + walkspeedBoost);	
+}
+
+function calculateMoveSpeeds(){
+	// Calculate movement
+	var hSpeed_old = hSpeed;
+	var vSpeed_old = vSpeed;
+	var hSpeed_new = lengthdir_x(inputMagnitude * getWalkSpeed(), inputDirection);
+	var vSpeed_new = lengthdir_y(inputMagnitude * getWalkSpeed(), inputDirection);
+	hSpeed = lerp(hSpeed_old, hSpeed_new, acceleration * _myDeltaTime);
+	vSpeed = lerp(vSpeed_old, vSpeed_new, acceleration * _myDeltaTime);	
+}
+
 // Item slots:
 
 //TODO: Refactor into array & update "move" code in step

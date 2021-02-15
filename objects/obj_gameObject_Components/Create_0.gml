@@ -10,6 +10,11 @@ flashWhite = false;
 flashTime = 0.1;
 _curFlashTime = 0;
 
+hSpeed = 0;
+vSpeed = 0;
+x_real = x;
+y_real = y;
+
 function setHp(_hp){
 	curHp = _hp;	
 }
@@ -23,6 +28,14 @@ function attachComponent(_aComponent){
 
 function instantiateComponent(_aComponent){
 	return instance_create_layer(x, y, "Components", _aComponent);
+}
+
+function updateRealCoordinatesAndTryToMove(hChange, vChange){
+	// Apply movement
+	x_real += hChange;
+	y_real += vChange;
+
+	tryToMove(floor(x_real), floor(y_real)); // Handles collisions with solids
 }
 
 function tryToMove(newX, newY){

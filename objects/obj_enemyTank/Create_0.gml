@@ -4,6 +4,7 @@ event_inherited();
 name = "Enemy Tank Body";
 maxHp = 25;
 setHp(maxHp);
+moveSpeed = 10;
 
 myTurret = instance_create_layer(x, y, "Enemy_turrets", obj_enemyTankTurret);
 
