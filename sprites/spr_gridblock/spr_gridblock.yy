@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c10ff1b2-46df-4076-829e-24bb2c23c1bc","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "scenery",
+    "path": "folders/Sprites/scenery.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_gridblock",

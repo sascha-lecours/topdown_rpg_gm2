@@ -71,3 +71,7 @@ function tryToShoot(aimDirection){
 	_myRecoil += recoilPerShot;
 	_myShotcooldown = shotCooldown;
 }
+
+function addCoolDownTime(_time){
+	_myShotcooldown += _time;
+}

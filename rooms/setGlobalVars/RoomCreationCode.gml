@@ -10,5 +10,4 @@ enum gunTypes {
 	rocketLauncher
 }
 
-
 room_goto_next();

@@ -1,14 +1,22 @@
-/// @description Initialize
+/// @description Initialize, create turret
 event_inherited();
 
-name = "Stationary enemy turret";
-maxHp = 20;
+name = "Enemy Tank Body";
+maxHp = 25;
 setHp(maxHp);
-traverseSpeed = 10;
-mainGunType = obj_enemyTurretGun;
+
+myTurret = instance_create_layer(x, y, "Enemy_turrets", obj_enemyTankTurret);
 
 
 _target = noone;
 
-mainGun = instantiateComponent(mainGunType);
-attachComponent(mainGun);
+currentState = states.movingUp;
+previousState = states.stopped;
+
+enum states {
+	movingUp,
+	movingDown,
+	movingLeft,
+	movingRight,
+	stopped
+}

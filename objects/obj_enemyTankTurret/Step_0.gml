@@ -7,4 +7,3 @@ _target = getPlayer();
 traverseTowardTarget(_target, traverseSpeed);
 
 mainGun.tryToShoot(facingAngle);
-secondaryGun.tryToShoot(facingAngle);

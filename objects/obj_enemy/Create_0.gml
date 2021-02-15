@@ -5,6 +5,8 @@ name = "Uninitialized Enemy";
 myBulletLayer = "Bullets_enemies";
 mainGunType = obj_enemyTurretGun;
 
+shootable = true;
+
 facingAngle = 0;
 
 function getPlayer(){
