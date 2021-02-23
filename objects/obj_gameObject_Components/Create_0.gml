@@ -10,8 +10,6 @@ flashWhite = false;
 flashTime = 0.1;
 _curFlashTime = 0;
 
-hSpeed = 0;
-vSpeed = 0;
 x_real = x;
 y_real = y;
 

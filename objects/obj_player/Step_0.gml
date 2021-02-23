@@ -18,7 +18,7 @@ calculateMoveSpeeds();
 
 updateRealCoordinatesAndTryToMove(hSpeed, vSpeed);
 
-// Make image face correct direction
+// Determine correct direction for torso to face
 facingAngle = point_direction(x, y, mouse_x, mouse_y); // Later this may get more complex -> slower traverse?
 
 // Move components // TODO: Move this method to create event and call it here for each piece
@@ -33,7 +33,7 @@ with(rightGun){
 	y= other.y + lengthdir_y(other.rightGunOffsetDistance, other.rightGunOffsetAngle + other.facingAngle);
 }
 
-// Sprite is now read to update
+// Movement complete, update sprite:
 
 updateSprite();
 
