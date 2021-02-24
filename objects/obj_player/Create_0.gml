@@ -15,12 +15,41 @@ y_real = y;
 hSpeed = 0;
 vSpeed = 0;
 walkspeedBoost = 0;
-facingAngle = 0; // updated instead of image_angle, passed to sprite object.
 
 // Starting components
 leftGunType = obj_machineGun;
 rightGunType = obj_rocketLauncher;
 dashModuleType = obj_mobility;
+
+leftGunOffsetDistance = 17;
+leftGunOffsetAngle = 45;
+
+rightGunOffsetDistance = 17;
+rightGunOffsetAngle = -45;
+
+// Starting Component Structs:
+
+leftGunComponent = {
+	componentObject : leftGunType, // obj to be spawned
+	offsetDistance : leftGunOffsetDistance, // Offsets relative to image at 0 degrees, in pixels
+	offsetAngle : leftGunOffsetAngle,
+	instance : noone
+}
+
+rightGunComponent = {
+	componentObject : rightGunType, // obj to be spawned
+	offsetDistance : rightGunOffsetDistance, // Offsets relative to image at 0 degrees, in pixels
+	offsetAngle : rightGunOffsetAngle,
+	instance : noone
+}
+
+mobilityComponent = {
+	componentObject : dashModuleType, // obj to be spawned
+	offsetDistance : 0, // Offsets relative to image at 0 degrees, in pixels
+	offsetAngle : 0,
+	instance : noone
+}
+
 
 _mySprite = instance_create_layer(x, y, "Player", obj_player_sprite);
 myBulletLayer = "Bullets_player";
@@ -51,18 +80,16 @@ function calculateMoveSpeeds(){
 
 // Item slots:
 
-//TODO: Refactor into array & update "move" code in step
-
-leftGunOffsetDistance = 17;
-leftGunOffsetAngle = 45;
-leftGun = instantiateComponent(leftGunType);
-attachComponent(leftGun);
-
-rightGunOffsetDistance = 17;
-rightGunOffsetAngle = -45;
-rightGun = instantiateComponent(rightGunType);
-attachComponent(rightGun);
+//TODO: Refactor into array
 
 
-dashModule =  instantiateComponent(dashModuleType);
-attachComponent(dashModule);
+instantiateComponent(leftGunComponent);
+attachComponent(leftGunComponent);
+
+
+instantiateComponent(rightGunComponent);
+attachComponent(rightGunComponent);
+
+
+instantiateComponent(mobilityComponent);
+attachComponent(mobilityComponent);

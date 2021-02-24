@@ -7,8 +7,6 @@ mainGunType = obj_enemyTurretGun;
 
 shootable = true;
 
-facingAngle = 0;
-
 function getPlayer(){
 	if(instance_exists(obj_player)) {
 		return obj_player;

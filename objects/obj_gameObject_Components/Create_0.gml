@@ -12,20 +12,34 @@ _curFlashTime = 0;
 
 x_real = x;
 y_real = y;
+facingAngle = 0; // real direction object is "facing" - may or may not match image_angle.
+
+myComponents = []; // array of component structs
 
 function setHp(_hp){
 	curHp = _hp;	
 }
+	
+/* component struct format:
+	myComponent = {
+		componentObject = object, // the actual obj to be spawned
+		offsetDistance : int, // Offset relative to origin, in pixels
+		offsetAngle : int // angle in degrees relative to origin
+		instance : instantiated object - the actual created object in the game. Starts empty.
+	}
+*/
+
+
+function instantiateComponent(_aComponent){
+	_aComponent.instance =  instance_create_layer(x, y, "Components", _aComponent.componentObject); 
+}
 
 function attachComponent(_aComponent){
-	with(_aComponent){
+	with(_aComponent.instance){
 		myOwner = other;
 		attach();
 	}
-}
-
-function instantiateComponent(_aComponent){
-	return instance_create_layer(x, y, "Components", _aComponent);
+	array_push(myComponents, _aComponent);
 }
 
 function updateRealCoordinatesAndTryToMove(hChange, vChange){

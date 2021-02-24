@@ -23,6 +23,7 @@ facingAngle = point_direction(x, y, mouse_x, mouse_y); // Later this may get mor
 
 // Move components // TODO: Move this method to create event and call it here for each piece
 // TODO cont'd: array of components for each component user, with offsets.
+/*
 with(leftGun){
 	x= other.x + lengthdir_x(other.leftGunOffsetDistance, other.leftGunOffsetAngle + other.facingAngle);
 	y= other.y + lengthdir_y(other.leftGunOffsetDistance, other.leftGunOffsetAngle + other.facingAngle);
@@ -32,6 +33,7 @@ with(rightGun){
 	x= other.x + lengthdir_x(other.rightGunOffsetDistance, other.rightGunOffsetAngle + other.facingAngle);
 	y= other.y + lengthdir_y(other.rightGunOffsetDistance, other.rightGunOffsetAngle + other.facingAngle);
 }
+*/
 
 // Movement complete, update sprite:
 
@@ -40,15 +42,15 @@ updateSprite();
 // Attacking:
 
 if(buttonFire1){
-	with(leftGun) tryToShoot(point_direction(x, y, mouse_x, mouse_y));
+	with(leftGunComponent.instance) tryToShoot(point_direction(x, y, mouse_x, mouse_y));
 }
 
 if(buttonFire2){
-	with(rightGun) tryToShoot(point_direction(x, y, mouse_x, mouse_y));
+	with(rightGunComponent.instance) tryToShoot(point_direction(x, y, mouse_x, mouse_y));
 }
 
 // Use dash item:
 
 if(keyDash){
-	with(dashModule) tryToDash();	
+	with(mobilityComponent.instance) tryToDash();	
 }
