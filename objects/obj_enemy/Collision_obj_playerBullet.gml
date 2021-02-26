@@ -1,5 +1,5 @@
-/// @description Insert description here
+/// @description Interact with bullet that hit
 if(shootable){
 	takeDamage(other.damage);
-	instance_destroy(other);
+	if(!other.piercing) instance_destroy(other);
 }

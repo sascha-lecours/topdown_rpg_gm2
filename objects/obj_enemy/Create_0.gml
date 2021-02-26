@@ -6,6 +6,7 @@ myBulletLayer = "Bullets_enemies";
 mainGunType = obj_enemyTurretGun;
 
 shootable = true;
+mass = 1; // Deducted from penetrating rounds
 
 function getPlayer(){
 	if(instance_exists(obj_player)) {

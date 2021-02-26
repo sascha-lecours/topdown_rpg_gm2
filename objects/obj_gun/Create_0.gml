@@ -13,6 +13,7 @@ damageMax = 1;
 shotSpeed = 6;
 shotLifetime = 5;
 maxOffset = 60; // max # of degrees a shot can be off by
+piercing = false;
 
 explosive = false;
 explosionSize = 0;
@@ -60,6 +61,7 @@ function tryToShoot(aimDirection){
 		myShot.speed = shotSpeed;
 		myShot.damage = getDamage();
 		myShot.lifetime = shotLifetime;
+		myShot.piercing = piercing;
 		
 		if(explosive){
 			myShot.explosive = true;

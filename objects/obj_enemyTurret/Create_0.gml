@@ -12,10 +12,29 @@ offsetTime = 0.1;
 
 _target = noone;
 
-mainGun = instantiateComponent(mainGunType);
-attachComponent(mainGun);
 
-secondaryGun = instantiateComponent(secondaryGunType);
-attachComponent(secondaryGun);
+mainGunComponent = {
+	componentObject : mainGunType, 
+	offsetDistance : 10,
+	offsetAngle : 0,
+	instance : noone
+}
+
+instantiateComponent(mainGunComponent);
+attachComponent(mainGunComponent);
+
+mainGun = mainGunComponent.instance;
+
+secondaryGunComponent = {
+	componentObject : secondaryGunType, 
+	offsetDistance : 10,
+	offsetAngle : 0,
+	instance : noone
+}
+
+instantiateComponent(secondaryGunComponent);
+attachComponent(secondaryGunComponent);
+
+secondaryGun =secondaryGunComponent.instance;
 
 secondaryGun.addCoolDownTime(offsetTime);

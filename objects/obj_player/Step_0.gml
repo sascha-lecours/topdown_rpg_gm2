@@ -21,19 +21,6 @@ updateRealCoordinatesAndTryToMove(hSpeed, vSpeed);
 // Determine correct direction for torso to face
 facingAngle = point_direction(x, y, mouse_x, mouse_y); // Later this may get more complex -> slower traverse?
 
-// Move components // TODO: Move this method to create event and call it here for each piece
-// TODO cont'd: array of components for each component user, with offsets.
-/*
-with(leftGun){
-	x= other.x + lengthdir_x(other.leftGunOffsetDistance, other.leftGunOffsetAngle + other.facingAngle);
-	y= other.y + lengthdir_y(other.leftGunOffsetDistance, other.leftGunOffsetAngle + other.facingAngle);
-}
-
-with(rightGun){
-	x= other.x + lengthdir_x(other.rightGunOffsetDistance, other.rightGunOffsetAngle + other.facingAngle);
-	y= other.y + lengthdir_y(other.rightGunOffsetDistance, other.rightGunOffsetAngle + other.facingAngle);
-}
-*/
 
 // Movement complete, update sprite:
 

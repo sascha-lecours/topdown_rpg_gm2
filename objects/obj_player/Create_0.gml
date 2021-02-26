@@ -18,7 +18,7 @@ walkspeedBoost = 0;
 
 // Starting components
 leftGunType = obj_machineGun;
-rightGunType = obj_rocketLauncher;
+rightGunType = obj_railGun;
 dashModuleType = obj_mobility;
 
 leftGunOffsetDistance = 17;
@@ -80,7 +80,7 @@ function calculateMoveSpeeds(){
 
 // Item slots:
 
-//TODO: Refactor into array
+// TODO: Refactor into array
 
 
 instantiateComponent(leftGunComponent);

@@ -11,5 +11,14 @@ shootable = false;
 
 _target = noone;
 
-mainGun = instantiateComponent(mainGunType);
-attachComponent(mainGun);
+mainGunComponent = {
+	componentObject : mainGunType, 
+	offsetDistance : 10,
+	offsetAngle : 0,
+	instance : noone
+}
+
+instantiateComponent(mainGunComponent);
+attachComponent(mainGunComponent);
+
+mainGun = mainGunComponent.instance;
