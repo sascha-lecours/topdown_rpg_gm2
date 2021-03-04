@@ -31,6 +31,7 @@
     {"id":{"name":"obj_wall_white_32x32","path":"objects/obj_wall_white_32x32/obj_wall_white_32x32.yy",},"order":1,},
     {"id":{"name":"setGlobalVars","path":"rooms/setGlobalVars/setGlobalVars.yy",},"order":1,},
     {"id":{"name":"obj_rocketLauncher","path":"objects/obj_rocketLauncher/obj_rocketLauncher.yy",},"order":2,},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":12,},
     {"id":{"name":"obj_railGun","path":"objects/obj_railGun/obj_railGun.yy",},"order":1,},
     {"id":{"name":"obj_wall_parent","path":"objects/obj_wall_parent/obj_wall_parent.yy",},"order":0,},
     {"id":{"name":"obj_explosion","path":"objects/obj_explosion/obj_explosion.yy",},"order":6,},
