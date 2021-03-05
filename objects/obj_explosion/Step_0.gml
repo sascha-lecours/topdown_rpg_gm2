@@ -1,6 +1,11 @@
 /// @description Expand
 event_inherited();
 
+if(!shakeAdded){
+	obj_gameController.addScreenShake(explosionShake, explosionShake);
+	shakeAdded = true;
+}
+
 if (_lingering || ((explosionSize - _currentSize) < explosionFudge)){ // fullsize
 	_lingering = true;
 	_lingerTimer -= _myDeltaTime;

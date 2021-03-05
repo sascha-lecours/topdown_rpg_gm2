@@ -3,6 +3,8 @@ event_inherited();
 
 explosionSize = 1; // size 10 -> 1:1 scale
 explosionDamage = 1;
+explosionShake = 100;
+shakeAdded = false;
 
 explosionBlastAcceleration = 3.75; // used in size lerp
 explosionLinger = 0.01; // time to linger at full size

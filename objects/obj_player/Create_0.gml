@@ -18,7 +18,7 @@ walkspeedBoost = 0;
 
 // Starting components
 leftGunType = obj_machineGun;
-rightGunType = obj_railGun;
+rightGunType = obj_shotGun;
 dashModuleType = obj_mobility;
 
 leftGunOffsetDistance = 17;

@@ -11,8 +11,10 @@ if(instance_exists(obj_player))
 	_x = clamp(_x, 0, room_width-view_width);
 	_y = clamp(_y, 0, room_height-view_height);
 
-	
-	
+	// Apply screenshake
+	_x += random_range(-xShakeOffset, xShakeOffset);
+	_y += random_range(-yShakeOffset, yShakeOffset);
+
 	var _cur_x = camera_get_view_x(view);
 	var _cur_y = camera_get_view_y(view);
 	

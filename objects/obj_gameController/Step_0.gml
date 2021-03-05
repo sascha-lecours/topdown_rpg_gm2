@@ -1,4 +1,4 @@
-_myDeltaTime = obj_gameController.efficientDeltaTime;
+_myDeltaTime = efficientDeltaTime;
 /// @description Step events
 keyRestart = keyboard_check(ord("R"));
 keyQuit = keyboard_check(vk_escape);
@@ -8,5 +8,10 @@ if(keyRestart) room_restart();
 
 // Screenshake
 
-currentShake -= _myDeltaTime;
+if(currentShake_X > 0 || currentShake_Y > 0){
+	camera.setShake(currentShake_X, currentShake_Y);
+	currentShake_X = lerp(currentShake_X, 0, shakeDecayFactor*_myDeltaTime);
+	currentShake_Y = lerp(currentShake_Y, 0, shakeDecayFactor*_myDeltaTime);
+}
+
 
